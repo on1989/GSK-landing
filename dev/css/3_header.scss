@@ -1,0 +1,65 @@
+$green:#143B13;
+$white:#fff;
+$beige:#D9AF66;
+$beige-hover:#EECA8C;
+$green-gradient: linear-gradient(75.9deg, #143B13 -0.12%, #0B230A 98.44%);
+$Frank:'Frank Ruhl Libre', serif;
+$Roboto:'Roboto', sans-serif;
+header{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	border-bottom: 1px solid $beige;
+	z-index: 2;
+	background: $green-gradient;
+	.col-lg-12{
+		height: 160px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		transition: 0.5s linear;
+	}
+	&.mini-header{
+		.col-lg-12{
+			height: 100px;
+		}
+	}
+	h2{
+		color: $white;
+		font-family: $Frank;
+		font-size: 36px;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-align: center;
+		span{
+			display: block;
+			font-family: $Roboto;
+			font-style: italic;
+			font-size: 24px;
+			text-transform: capitalize;
+		}
+	}
+	.button{
+		color: $green;
+		background: $beige;
+		height: 49px;
+		max-width: 233px;
+		font-weight: 900;
+		font-family: $Frank;
+		&:hover{
+			background: $beige-hover;
+			border-color: $beige-hover;
+			color: $green;
+		}
+		&:before{
+			font-size: 20px;
+		}
+	}
+}
